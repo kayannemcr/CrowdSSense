@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:background="#ffccdc"
+        tools:context=".MainActivity">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Database Entries:"
+            android:id="@+id/timenow"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/button4"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/BTmess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/setMacAdd"
+            android:layout_gravity="bottom"
+            android:layout_toStartOf="@+id/setMacAdd"
+            android:background="#ffff99"
+            android:gravity="bottom"
+            android:maxLines="25"
+            android:textColor="#0c2fdb"
+            android:textSize="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Export"
+            android:id="@+id/export_Button"
+            android:onClick="exportButtonClicked"
+            android:textColor="#1b8011"
+            android:textSize="12dp"
+            android:layout_below="@+id/delete_Button"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/frameLayout" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#e3e3e3"
+            android:layout_toStartOf="@+id/button5"
+            android:layout_above="@+id/BTmess"
+            android:layout_below="@+id/timenow"
+            android:id="@+id/frameLayout">
+
+            <TextView
+                android:id="@+id/records_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="257dp"
+                android:layout_above="@+id/BTmess"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editText"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_toStartOf="@+id/add_Button"
+                android:background="#e3e3e3"
+                android:maxLines="20"
+                android:scrollbars="vertical"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#0b700b"
+                android:textSize="13dp" />
+
+            <TextView
+                android:text="Last Reading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView" />
+        </FrameLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:id="@+id/button4"
+            android:textSize="12dp"
+            android:textColor="#6c031b"
+            android:onClick="startButtonClicked"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/frameLayout" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:id="@+id/button8"
+            android:textSize="12dp"
+            android:textColor="#6c031b"
+            android:onClick="stopButtonClicked"
+            android:layout_below="@+id/button4"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/frameLayout" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEL DB"
+            android:id="@+id/delete_Button"
+            android:onClick="deleteButtonClicked"
+            android:textColor="#1b8011"
+            android:textSize="12dp"
+            android:layout_below="@+id/button8"
+            android:layout_alignParentEnd="true" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLR SCN"
+            android:id="@+id/button5"
+            android:onClick="onClickClearBT"
+            android:textColor="#3057e5"
+            android:textSize="12dp"
+            android:layout_below="@+id/export_Button"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:id="@+id/setMacAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SET ADD"
+            android:textSize="12dp"
+            android:onClick="setMacAdd"
+            android:layout_below="@+id/button5"
+            android:layout_alignParentEnd="true" />
+
+        <Switch
+            android:text="BT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switch2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/switch1" />
+
+        <Switch
+            android:text="GPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switch1"
+            android:layout_above="@+id/switch2"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
